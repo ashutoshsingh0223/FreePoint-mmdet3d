@@ -55,3 +55,22 @@ export LD_LIBRARY_PATH=${CUDA_HOME}lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 > Install from git
 
 `pip install git+https://github.com/pawelswoboda/RAMA.git@2fa8b71d301ac8e7382a089a9eb8350755851a42`
+
+
+
+## Quickstart
+
+```bash
+>> from free_point.utils.run import *
+>> run(
+    out_dir="output/"
+    weight_feature=0,
+    weight_xyz=1,
+    k1=4,
+    k2=4,
+    num_points=20000,
+    num_iters_for_graph_cut=5,
+    ransac_distance=0.175
+)
+
+```

@@ -74,3 +74,5 @@ def run(
 
     name = Path(r["data_samples"].lidar_path).stem
     np.save(str(out_dir / f"{name}.npy"), labels)
+    points = r["inputs"]["points"].detach().cpu().numpy()
+    return points, labels
