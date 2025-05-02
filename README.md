@@ -1,5 +1,5 @@
 # FreePoint-mmdet3d
-
+Unofficial implementation of FreePoint: Unsupervised Point Cloud Instance Segmentation by Zhang et al. built on `mmdet3d`.
 
 ## Setup
 
@@ -19,7 +19,6 @@ pip install mmengine==0.9.0
 pip install mmcv==2.0.1 -f https://download.openmmlab.com/mmcv/dist/cu118/torch2.0/index.html
 pip install mmdet==3.2.0
 pip install mmdet3d==1.4.0
-pip install mmpretrain==1.2.0
 pip install -r requirements.txt
 pip install numpy==1.23.5
 pip install numba==0.60.0
