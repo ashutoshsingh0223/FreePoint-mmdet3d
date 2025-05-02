@@ -1,5 +1,12 @@
 # FreePoint-mmdet3d
+
 Unofficial implementation of FreePoint: Unsupervised Point Cloud Instance Segmentation by Zhang et al. built on `mmdet3d`.
+
+<p float="center">
+  <img src="assets/scene_000010_1.png" width="400" />
+  <img src="assets/scene_000010_2.png" width="400" />
+  <img src="assets/scene_000010_3.png" width="400" />
+</p>
 
 ## Setup
 
