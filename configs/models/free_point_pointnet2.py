@@ -3,7 +3,7 @@ model = dict(
     feature_extractor_callable="features_after_encoding",
     input_dict=dict(num_neighbours=8, pooling="max"),
     feature_extractor=dict(
-        type="ProposalContrastModel",
+        type="FeatureExtractor",
         backbone=dict(
             type="PointNet2SAMSG",
             in_channels=4,
@@ -38,34 +38,5 @@ model = dict(
                 (257, 128, 128),
             ),
         ),
-        self_sup_head=dict(
-            type="SelfSupHead",
-            embed_layer_dims=[128, 128, 128],
-            radius=1.0,
-            sample_nums=16,
-        ),
-        cluster_prediction_head=dict(
-            type="ClusterPrediction",
-            embed_layer_dims=[128, 128],
-        ),
-        decode_head=dict(
-            type="ProposalContrastDecodeHead",
-            losses=[
-                dict(
-                    type="SSLInstanceLoss",
-                    criterion="cross_entropy",
-                    temperature=0.1,
-                    loss_weight=1.0,
-                ),
-                dict(
-                    type="SSLClusterLoss",
-                    sinkhorn_iterations=3,
-                    epsilon=0.03,
-                    temperature=0.1,
-                    loss_weight=1.0,
-                ),
-            ],
-        ),
-        n_proposals=1024,
     ),
 )
