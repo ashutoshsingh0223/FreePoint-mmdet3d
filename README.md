@@ -48,6 +48,13 @@ pip install torch-cluster==1.6.3 -f https://data.pyg.org/whl/torch-2.0.1+cu118.h
 
 
 _RAMA installation_
+> Preliminaries
+```bash
+pip install wheel
+pip install cmake==3.27.9
+```
+*cmake==3.27.9 is what I had.*
+
 > Set ENV vars
 ```bash
 export CUDA_HOME=/usr/local/cuda-11.8/
